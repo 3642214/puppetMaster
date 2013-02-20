@@ -1,0 +1,4 @@
+GitServer="192.168.8.209"
+PATH=$PATH:/root/git/shell/basic
+stateFileName="/home/testuser/State"
+key=`hostname |cut -d'.' -f 1`
