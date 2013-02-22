@@ -14,8 +14,16 @@
 					then
 						echo " $0 -- Update Config ......."
 						bash update_config.sh $job || exit $?
+				elif [ $1 = $job ]
+					then
+						echo " $0 -- Update $1 ........."
+						bash git_pull.sh $job || exit $?
+						bash update_soft.sh $job || exit $?		
+				elif [ $1 = "CN" -o $1 = "SN" -o $1 = "CLT_Master" -o $1 = "CLT_Snode" ]
+					then
+						exit 0				
 				else
-					echo " $0 -- paremeter was not soft or config"
+					echo " $0 -- paremeter error ,args:>> $1 << "
 					exit 133
 				fi
 			bash run.sh $job || exit $?
