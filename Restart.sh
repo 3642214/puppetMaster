@@ -1,6 +1,5 @@
 #!/bin/bash
 [ -f $stateFileName ] || { echo " $0 -- not found stateFile";exit 134; }
-	[ -n "$1" ] || { echo " $0 -- restart parameter error:no parameter";exit 140; }
 		[ -d /root/git/shell/basic ] || bash initShPath.sh || exit $?
 		cd /root/git/shell/basic
 		bash git_pull.sh shell || exit $?
