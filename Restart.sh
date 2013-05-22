@@ -10,10 +10,9 @@
 						then
 								echo " $0 -- Restart Soft ........."
 								bash restartSoft.sh $job || exit $?
-					
 					fi
 				}
-			if [ "$1" = "CN" -o "$1" = "SN" -o "$1" = "CLT_Master" -o "$1" = "CLT_Snode" ]
+			if [ -z "$1" -o "$1" = "CN" -o "$1" = "SN" -o "$1" = "CLT_Master" -o "$1" = "CLT_Snode" ]
 				then
 					exit 0				
 			else
