@@ -31,7 +31,7 @@
 								bash run.sh $job || exit $?	
 					fi
 				}
-			if [ $2 = "CN" -o $2 = "SN" -o $2 = "CLT_Master" -o $2 = "CLT_Snode" -o $2 = "RTSP"]
+			if [ $2 = "CN" -o $2 = "SN" -o $2 = "CLT_Master" -o $2 = "CLT_Snode" -o $2 = "RTSP" ]
 				then
 					exit 0				
 			else
