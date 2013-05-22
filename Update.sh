@@ -29,6 +29,7 @@
 								echo " $0 -- Update Config ......."
 								bash update_config.sh $job || exit $?	
 								bash run.sh $job || exit $?	
+					fi
 				}
 			if [ $2 = "CN" -o $2 = "SN" -o $2 = "CLT_Master" -o $2 = "CLT_Snode" ]
 				then
