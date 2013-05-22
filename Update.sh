@@ -9,33 +9,33 @@
 				{
 					if [ $1 = "soft" -a -z "$2" ]
 						then
-								echo " $0 -- Update Soft ........."
+								echo " $0 -- Update Soft .... $job ....."
 								bash git_pull.sh $job || exit $?
 								bash update_soft.sh $job || exit $?
 								bash run.sh $job || exit $?
 					elif [ $1 = "soft" -a $2 = $job ]
 						then
-								echo " $0 -- Update Soft ........."
+								echo " $0 -- Update Soft .... $job ....."
 								bash git_pull.sh $job || exit $?
 								bash update_soft.sh $job || exit $?
 								bash run.sh $job || exit $?
 					elif [ $1 = "config"  -a -z "$2" ]
 						then
-								echo " $0 -- Update Config ......."
+								echo " $0 -- Update Config .... $job ....."
 								bash update_config.sh $job || exit $?
 								bash run.sh $job || exit $?	
 					elif [ $1 = "config"  -a $2 = $job ]
 						then
-								echo " $0 -- Update Config ......."
+								echo " $0 -- Update Config .... $job ....."
 								bash update_config.sh $job || exit $?	
 								bash run.sh $job || exit $?	
 					fi
 				}
-			if [ $2 = "CN" -o $2 = "SN" -o $2 = "CLT_Master" -o $2 = "CLT_Snode" ]
+			if [ $2 = "CN" -o $2 = "SN" -o $2 = "CLT_Master" -o $2 = "CLT_Snode" -o $2 = "RTSP"]
 				then
 					exit 0				
 			else
-				echo " $0 -- paremeter error ,args:>> $1 << "
+				echo " $0 -- paremeter error ,args:>> $2 << "
 				exit 133
 			fi
 			
