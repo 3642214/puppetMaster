@@ -1,6 +1,6 @@
 #/bin/bash
 . Config
-[ ! -f $stateFileName ] || { echo " $0 -- create error:state file Already exists";exit 130; }
+[ ! -s $stateFileName ] || { echo " $0 -- create error:state file Already exists";exit 130; }
       [ -d /root/git/shell/basic ] || bash initShPath.sh || exit $?
         				cd /root/git/shell/basic
                 bash git_pull.sh shell || exit $?
